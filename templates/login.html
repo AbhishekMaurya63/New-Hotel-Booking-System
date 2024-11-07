@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/regCSS.css">
+</head>
+<body>
+  <div class="back"></div>
+<div class="container">
+  <div class="form-card">
+    <h3 class="text-center">Login</h3>
+    <form id="loginForm" onsubmit="return handleLogin(event)">
+      <span id="formErr" style="color: red; font-size: 10px;"></span>
+      <span id="formSuccess" style="color: green; font-size: 10px;"></span>
+      <div class="form-group">
+        <label for="registerEmail">Employee Email</label>
+        <input type="text" class="form-control" name="email" id="registerEmail">
+        <span id="emailErr" style="color: red; font-size: 12px;"></span>
+      </div>
+      <div class="form-group">
+        <label for="registerPassword">Password</label>
+        <input type="password" class="form-control" name="password" id="registerPassword">
+        <div id="passwordErr"style="color: red;  font-size: 12px;"></div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+      <p class="text-center mt-3">
+        Don’t have an account? <a href="/">Register here</a>.
+      </p>
+    </form>
+  </div>
+</div>
+
+<script src="/static/js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/regCSS.css">
+  <link rel="stylesheet" href="/static/css/regCSS.css">
+</head>
+<body>
+<div class="back"></div>
+<div class="container">
+  <div class="form-card">
+    <h3 class="text-center">Register Employee</h3>
+    <form id="registerForm" onsubmit="return handleRegister(event)">
+      <span id="formErr" style="color: red; font-size: 10px;"></span>
+      <span id="formSuccess" style="color: green; font-size: 10px;"></span>
+      <div class="form-group">
+        <label for="registerName">Employee Name</label>
+        <input type="text" class="form-control" name="name" id="registerName">
+        <span id="nameErr" style="color: red; font-size: 12px;"></span>
+      </div>
+      <div class="form-group">
+        <label for="registerEmail">Employee Email</label>
+        <input type="email" class="form-control" name="email" id="registerEmail">
+        <span id="emailErr" style="color: red; font-size: 12px;"></span>
+      </div>
+      <div class="form-group">
+        <label for="registerPassword">Password</label>
+        <input type="password" class="form-control" name="password" id="registerPassword">
+        <div id="passwordErr"style="color: red;  font-size: 12px;"></div>
+      </div>
+      <div class="form-group">
+        <label for="coregisterPassword">Confirm Password</label>
+        <input type="password" class="form-control" name="conPassword" id="coregisterPassword">
+        <div id="repasswordErr"style="color: red; font-size: 12px;"></div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+      <p class="text-center mt-3">
+        Already have an account? <a href="/login">Login here</a>.
+      </p>
+    </form>
+  </div>
+</div>
+
+<script src="/static/js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+/* assets/css/styles.css */
+:root {
+    --primary-color: #1E3A8A; /* Adjust to the primary color from your library system */
+    --secondary-color: #E5E7EB; /* Lighter shade for background or cards */
+    --accent-color: #3B82F6; /* Accent color for buttons and highlights */
+    --text-color: #FFFFFF; /* Light color for text */
+}
+
+* {
+    font-family: sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    /* overflow: visible; */
+    /* justify-content: end; */
+}
+
+.sidebar-container {
+    width: 300px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.sidebar h2 {
+    font-weight: bold;
+    color: #1E3A8A;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar a {
+    color: var(--text-color);
+    display: block;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+}
+
+.navlist {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+.navlist li {
+    margin: 20px 0;
+}
+
+.logoImg{
+    width: 30px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+}
+
+.card h5 {
+    color: var(--accent-color);
+}
+
+.table th,
+.table td {
+    color: var(--primary-color);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+header.navbar {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+header h5 {
+    color: var(--primary-color);
+}
+
+.dropdown-toggle {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    min-width: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .sidebar-container {
+        display: none; /* Hide sidebar */
+    }
+
+    .main-content {
+        margin-left: 0; /* No margin when sidebar is hidden */
+        transition: margin-left 0.3s ease; /* Smooth transition */
+    }
+
+    .sidebar-expanded {
+        display: block !important; /* Show sidebar when expanded */
+    }
+    .sidebar .d-md-none{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .hide{
+        display: none;
+    }
+    .sidebar-container{
+        width: 100%;
+    }
+    .sidebar .d-md-none{
+        display: block;
+    }
+    .promptData{
+        width: 100%;
+    }
+}
+
+
+
+/* Styling for the Rooms Management Section */
+#addRoomForm .form-control,
+#addRoomForm .form-select {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#roomsList .list-group-item {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.remove-room-btn {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.remove-room-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+.addBtn{
+    background-color: white;
+}
+.addBtn:hover{
+    border: 1px solid #fff;
+    background-color: #1E3A8A;
+}
+
+
+/* Styling for the Guest Management Section */
+#addGuestForm .form-control {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#guestList .list-group-item {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.update-guest-btn,
+.remove-guest-btn {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.update-guest-btn:hover,
+.remove-guest-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+
+/* Booking Management Section */
+#bookRoomForm .form-control,
+#checkAvailabilityForm .form-control {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#bookingHistoryList .list-group-item {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.remove-booking-btn {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.remove-booking-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+
+.err{
+    color: red;
+}
+.number{
+display: flex;
+justify-content: left;
+}
+
+.countryCode{
+    border: none;
+    color: #1E3A8A;
+    background: transparent;
+    /* display: flex; */
+}
+.guestPhone{
+    border: none;
+    width: 100%;
+    background: transparent;
+    outline: none;
+}
+
+
+.removePropt{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0009;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1E3A8A;
+    display: none;
+    z-index: 1;
+}
+.propt{
+    /* width: 300px;
+    height: 200px; */
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.functbtn{
+   margin: 10px;
+   width: 100px;
+   background-color: #1E3A8A;
+    color: #fff;
+    border: 1px solid #1E3A8A;
+}
+.functbtn:hover{
+    border: 1px solid #1E3A8A;
+}
+.showPrompt{
+    background: #0007;
+    position: absolute;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.promptData{
+    background: #fff;
+    color: #1E3A8A;
+    padding: 20px;
+    width:400px ;
+    min-height:300px ;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    
+}
+.room{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    background-color: #1E3A8A;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.room span{
+    padding: 10px;
+}
+.roomdata{
+    background-color: #fff;
+    color: #1E3A8A;
+    border-radius: 5px;
+}
+.avalable_room{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height:fit-content;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+}
+.avalable_room th{
+    background:#1E3A8A;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    /* border: 1px solid #1E3A8A; */
+}
+
+.avalable_room td{
+    background:#d4d4d4;
+    color: #1E3A8A;
+    text-align: center;
+    border: 1px solid #fff;
+}
+.allBookingTable{
+    text-align: center;
+}
+.allBookingTable th{
+    border-radius: 10px 10px 0 0 ;
+}
+.allBookingTable td{
+    background: #1E3A8A;
+    color: #fff;
+    border: 1px solid #fff;
+}
