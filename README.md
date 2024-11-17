@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hotel Booking Management System
 
 This Hotel Booking Management System is a web application designed to help hotel staff manage bookings, rooms, guests, and revenue effectively. Built using Flask for the backend, it connects to a SQLite database to store and retrieve data, and uses HTML, CSS, JavaScript, and Bootstrap for the frontend interface.
@@ -96,3 +97,6 @@ Contributions are welcome! Please submit a pull request or open an issue for any
 ---
 
 > **Note**: This project is intended for hotel management staff and not customers directly. It includes secure login functionality for employees and ensures data accuracy for hotel room bookings and revenue.
+=======
+# New-Hotel-Booking-System
+>>>>>>> b5922b1d87cc9a882037c6477656b5a4ffb24eb4
